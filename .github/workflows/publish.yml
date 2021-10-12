@@ -21,6 +21,13 @@ jobs:
           distribution: 'adopt'
       - name: Set up Gradle
         run: gradle wrapper
+        env:
+          OSSRH_PASSWORD: ${{secrets.OSSRH_PASSWORD}}
+          OSSRH_PROFILE_ID: ${{secrets.OSSRH_PROFILE_ID}}
+          OSSRH_USERNAME: ${{secrets.OSSRH_USERNAME}}
+          SIGNING_KEY_ID: ${{secrets.SIGNING_KEY_ID}}
+          SIGNING_KEY_X64: ${{secrets.SIGNING_KEY_X64}}
+          SIGNING_PASSWORD: ${{secrets.SIGNING_PASSWORD}}
       - name: Granted permissions
         run: chmod +x ./gradlew
       - name: Publish to MavenCentral
