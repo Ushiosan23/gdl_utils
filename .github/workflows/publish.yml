@@ -19,6 +19,8 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+      - name: Set up Gradle
+        run: gradle wrapper
       - name: Granted permissions
         run: chmod +x ./gradlew
       - name: Publish to MavenCentral
