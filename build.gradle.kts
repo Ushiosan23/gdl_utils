@@ -14,7 +14,7 @@ buildscript {
 	extra.set("maven.artifactUrl", "https://github.com/Ushiosan23/gdl_utils")
 
 	extra.set("maven.licenseType", "MIT")
-	extra.set("maven.licenseUrl", "")
+	extra.set("maven.licenseUrl", "${extra["maven.artifactUrl"]}/blob/main/LICENCE.md")
 
 	extra.set(
 		"maven.developers", listOf(
