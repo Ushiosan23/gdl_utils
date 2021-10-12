@@ -19,6 +19,8 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+      - name: Granted permissions
+        run: chmod +x ./gradlew
       - name: Publish to MavenCentral
         run: ./gradlew lib:publishReleasePublicationToSonatypeRepository
         env:
