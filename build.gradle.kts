@@ -18,12 +18,12 @@ buildscript {
 
 	extra.set(
 		"maven.developers", listOf(
-			mapOf(
-				"id" to "Ushiosan23",
-				"name" to "Brian Alvarez",
-				"email" to "haloleyendee@outlook.com"
-			)
+		mapOf(
+			"id" to "Ushiosan23",
+			"name" to "Brian Alvarez",
+			"email" to "haloleyendee@outlook.com"
 		)
+	)
 	)
 	// Git configuration
 	extra.set("scm.connection", "scm:git:github.com/Ushiosan23/gdl_utils.git")
@@ -50,10 +50,11 @@ nexusPublishing {
 	repositories {
 		sonatype {
 			apply("local.gradle.kts")
+			apply("env.gradle.kts")
 			// Configure sonatype account
-			stagingProfileId.set(rootProject.extra["sonatype.profileId"] as String)
-			username.set(rootProject.extra["sonatype.username"] as String)
-			password.set(rootProject.extra["sonatype.password"] as String)
+			stagingProfileId.set(rootProject.extra["OSSRH_PROFILE_ID"] as String)
+			username.set(rootProject.extra["OSSRH_USERNAME"] as String)
+			password.set(rootProject.extra["OSSRH_PASSWORD"] as String)
 		}
 	}
 }

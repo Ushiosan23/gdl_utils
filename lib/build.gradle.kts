@@ -6,6 +6,7 @@ plugins {
 
 // Apply scripts
 apply("../local.gradle.kts")
+apply("../env.gradle.kts")
 // Extra properties
 var pExtra = rootProject.extra
 
@@ -106,6 +107,11 @@ afterEvaluate {
 // Signing configuration
 afterEvaluate {
 	signing {
+		useInMemoryPgpKeys(
+			pExtra["SIGNING_KEY_ID"] as String,
+			pExtra["SIGNING_KEY_X64"] as String,
+			pExtra["SIGNING_PASSWORD"] as String
+		)
 		sign(publishing.publications)
 	}
 }
