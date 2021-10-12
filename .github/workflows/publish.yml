@@ -9,6 +9,9 @@ jobs:
   publish:
     name: MavenCentral Publish
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -16,7 +19,6 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-          server-id: github
       - name: Publish to MavenCentral
         run: ./gradlew lib:publishReleasePublicationToSonatypeRepository
         env:
