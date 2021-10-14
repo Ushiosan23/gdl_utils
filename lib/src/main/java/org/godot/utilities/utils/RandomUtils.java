@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Calendar;
 import java.util.Random;
 
-public class RandomUtils {
+public final class RandomUtils {
 
 	/**
 	 * System random

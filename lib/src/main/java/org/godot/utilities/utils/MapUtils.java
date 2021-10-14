@@ -1,5 +1,6 @@
 package org.godot.utilities.utils;
 
+import org.godot.utilities.core.callback.IAnyUtilsCallbacks;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
@@ -42,6 +43,20 @@ public final class MapUtils {
 	@Contract(value = "_, _ -> new", pure = true)
 	public static <K, V> Map.@NotNull Entry<K, V> entry(K key, V value) {
 		return new AbstractMap.SimpleEntry<>(key, value);
+	}
+
+	/**
+	 * Foreach method
+	 *
+	 * @param map      Target map
+	 * @param callback Target execution callback
+	 * @param <K>      Generic key type
+	 * @param <V>      Generic value type
+	 */
+	public static <K, V> void foreach(@NotNull Map<K, V> map, IAnyUtilsCallbacks.IForeach<Map.Entry<K, V>> callback) {
+		for (Map.Entry<K, V> entry : map.entrySet()) {
+			callback.invoke(entry);
+		}
 	}
 
 }
