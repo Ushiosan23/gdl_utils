@@ -4,7 +4,7 @@ plugins {
 
 buildscript {
 	extra.set("project.name", "Godot Launcher Utilities")
-	extra.set("project.version", "0.1.0")
+	extra.set("project.version", "0.2.0")
 	// JDK Configuration
 	extra.set("sourceCompatibility", JavaVersion.VERSION_11)
 	// Maven configuration
