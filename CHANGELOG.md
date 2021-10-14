@@ -1,9 +1,9 @@
-# Versions
-
-- [0.1.0](https://github.com/Ushiosan23/gdl_utils/releases/tag/v0.1.0) __(Latest)__
-
 ## Information
 
+- __0.2.0__
+	- Collection shortcuts was added
+		- Map foreach
+		- List foreach
 - __0.1.0__
 	- Can detect any type of godot engine
 		- Get engine version
