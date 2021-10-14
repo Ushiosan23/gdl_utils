@@ -1,6 +1,9 @@
 # Godot Launcher Utilities (gdl_utils)
 
-# Versions
+## Javadoc
+[![javadoc](https://javadoc.io/badge2/com.github.ushiosan23/gdl_utils/javadoc.svg)](https://javadoc.io/doc/com.github.ushiosan23/gdl_utils)
+
+## Versions
 
 See all changelog: [here](./CHANGELOG.md)
 
